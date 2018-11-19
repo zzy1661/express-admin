@@ -1,16 +1,18 @@
-class User {
+const Entity = require('DomainEntity.js');
 
-    constructor({id=null, name='') {
+class User extends Entity{
+
+    constructor({id=null, name=''}) {
         this.id = id;
         this.name = name;
     }
 
     getTasks() {
-
+        this.dispatch('queryAll')
     }
 
     getTaskById() {
-
+        this.dispatch('queryById')
     }
 
     createTask(task) {
