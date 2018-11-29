@@ -2,9 +2,10 @@ const Entity = require('DomainEntity.js');
 
 class User extends Entity{
 
-    constructor({id=null, name=''}) {
+    constructor({id=null, name='',pw=''}) {
         this.id = id;
         this.name = name;
+        this.pw = pw;
     }
 
     getTasks() {
